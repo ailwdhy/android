@@ -28,20 +28,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         ListView listView = findViewById(R.id.lista);
         listView.setOnItemClickListener(this);
-        // adaptador para la lista de imagenes y textos
         Imagenes imagenes = new Imagenes(imagenesId, textos1, textos2, this);
-        // asignar el el adaptador a imagenes
         listView.setAdapter(imagenes);
     }
 
     @Override
-    // al hacer click en lista
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        // obtiene el item seleccionado
         String selectedItem = (String) String.valueOf(i);
-        // para el item 0 (primer ternurin) se abre la actividad de operaciones con el menusito
         if (selectedItem.equals("0")){
-            // intent para redireccionar al menusito
             Intent intent = new Intent(MainActivity.this, Actividad2.class);
             startActivity(intent);
         }

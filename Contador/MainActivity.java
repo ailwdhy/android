@@ -37,13 +37,10 @@ public class MainActivity extends AppCompatActivity implements View.OnKeyListene
 
     @Override
     public boolean onKey(View v, int keyCode, KeyEvent event) {
-        // verificamos si la tecla fue soltada
         if (event.getAction() == KeyEvent.ACTION_UP) {
             String inputText = numerito.getText().toString();
-            // try catch para validar el numerito
             try {
                 int inputNumber = Integer.parseInt(inputText);
-                // verificamos si el numero esta en el rango permitido
                 if (inputNumber >= 0 && inputNumber < 1000000) {
                     String textoEnPalabras = numero.convertirMiles(inputNumber);
                     textito.setText(textoEnPalabras);
@@ -59,24 +56,16 @@ public class MainActivity extends AppCompatActivity implements View.OnKeyListene
 
     @Override
     public void onClick(View view) {
-        // obtenemos el texto del edittext
         String inputText = numerito.getText().toString();
-        // convertimos el texto a numero entero
         int inputNumber = Integer.parseInt(inputText);
-        // creamos un nuevo timer
         countDownTimer = new CountDownTimer(99000, 1000) {
-            // inicializamos x con el numero ingresado
             int x = inputNumber;
 
             @Override
             public void onTick(long millisUntilFinished) {
-                // actualizamos el edittext con el valor de x
                 numerito.setText(String.valueOf(x));
-                // convertimos el numero a palabras
                 String textoEnPalabras = numero.convertirMiles(x);
-                // actualizamos el textview con el texto en palabras
                 textito.setText(textoEnPalabras);
-                // decrementamos x para que el numerito vaya disminuyendo
                 x--;
             }
 

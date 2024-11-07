@@ -14,7 +14,6 @@ public class Actividad2 extends AppCompatActivity {
     EditText textito1, textito2;
     TextView res;
     @Override
-    // creacion de la actividad
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calculadora);
@@ -24,7 +23,6 @@ public class Actividad2 extends AppCompatActivity {
     }
 
     @Override
-    // metodo para inflar el menusito
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
         getSupportActionBar().setTitle("Calculadora");
@@ -32,11 +30,9 @@ public class Actividad2 extends AppCompatActivity {
     }
 
     @Override
-    // metodo para seleccionar una opcion del menusito llamando a operaciones
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int x;
         int y;
-        // para cuando ambos no estan vacios trae los valores
         if (!textito1.getText().toString().isEmpty() && !textito2.getText().toString().isEmpty()) {
             x = Integer.parseInt(textito1.getText().toString());
             y = Integer.parseInt(textito2.getText().toString());
@@ -44,11 +40,8 @@ public class Actividad2 extends AppCompatActivity {
             x = 0;
             y = 0;
         }
-        // crea el objeto de la clase operaciones
         Operaciones operaciones = new Operaciones(x, y);
 
-
-        // dependiendo de la opcion seleccionada, se realiza la operacion
         if (item.getItemId()==R.id.suma||item.getItemId()==R.id.sumat)
             res.setText("resultado de la suma: " + operaciones.suma());
         else if (item.getItemId()==R.id.resta||item.getItemId()==R.id.restat)

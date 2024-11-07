@@ -39,26 +39,17 @@ public class Imagenes extends BaseAdapter {
     }
 
     @Override
-    // funciona como un for por cada elemento i
     public View getView(int i, View view, ViewGroup viewGroup) {
-        // infla la lista
         view = inflater.inflate(R.layout.lista, null);
-        // objeto para imagenes
         ImageView imageView = view.findViewById(R.id.imagen);
-        // trae las imagenes
         imageView.setImageResource(imagenes[i]);
 
-        // objetito para los textos
         TextView texto1 = view.findViewById(R.id.texto1);
-        // trae los textos
         texto1.setText(textos1[i]);
 
 
-        // objeto para el subtexto
         TextView texto2 = view.findViewById(R.id.texto2);
-        // trae los subtextos
         texto2.setText(textos2[i]);
-        // manda la vista
         return view;
     }
 }
