@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/suma"
+        android:title="Suma"
+        android:icon="@drawable/suma"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/resta"
+        android:title="Resta"
+        android:icon="@drawable/restar"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/multiplicar"
+        android:title="Multiplicar"
+        android:icon="@drawable/multiply"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/dividir"
+        android:title="Dividir"
+        android:icon="@drawable/division_symbol_svgrepo_com"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/sumat"
+        android:title="Suma"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/restat"
+        android:title="Resta"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/multiplicart"
+        android:title="Multiplicar"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/dividirt"
+        android:title="Dividir"
+        app:showAsAction="never" />
+
+</menu>
