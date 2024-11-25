@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Primer campo de texto -->
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese el primer valor"
+        android:enabled="false"
+        android:inputType="number" />
+
+    <!-- Segundo campo de texto -->
+    <EditText
+        android:id="@+id/edit2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese el segundo valor"
+        android:enabled="false"
+        android:inputType="number" />
+
+    <!-- Spinner para seleccionar figura -->
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Botón para calcular -->
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:enabled="false" />
+
+    <!-- Botón para ir a la segunda pantalla -->
+    <Button
+        android:id="@+id/btnSegundaPantalla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ir a Segunda Pantalla" />
+
+</LinearLayout>
